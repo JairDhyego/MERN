@@ -1,0 +1,1 @@
+Estou começando a estudar node e esse projeto aqui é um pequeno teste de conhecimentos com criação de crud.

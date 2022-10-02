@@ -1,8 +1,13 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
-});
+const userRoute = require("./src/routes/user.route");
+const connectDatabase = require("./src/database/db");
 
-app.listen(3000);
+const port = 3000;
+
+connectDatabase();
+app.use(express.json());
+app.use("/users", userRoute);
+
+app.listen(port, () => console.log("Tô rodando hein"));
